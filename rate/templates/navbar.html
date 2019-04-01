@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbstron">
+    <nav class=" " style="background-color:rgb(196, 180, 214); border:rgb(196, 180, 214); padding:20px;">
+        <div class="container-fluid">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+               
+                    <img style="height:100px; width:100px; margin-right: 100px;" src="https://cdn.pixabay.com/photo/2016/08/09/17/52/instagram-1581266_960_720.jpg">
+                </a>
+
+             
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2000px-Instagram_logo.svg.png" width=100px height=35px alt="INSTAGRAM"> </a>
+                </a>
+
+
+
+             </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+              
+                 <form class="navbar-form" role="search" action="{% url 'search_results' %}">
+
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search User" name="picture">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search" ></i></button>
+                        </div>
+                    </div>
+
+                </form>
+              
+             </div>
+           
+  <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+    <div class="col-sm-3 " style="float: right; margin-top: -20px; margin-right: 80px">
+            {% if user.is_authenticated %}
+            <ul>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-expanded="false">Account
+                          <span class="caret"></span>
+                      </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li>
+                    <a href="/">Home</a>
+                  </li>
+                  <li>
+                     <a href="{% url 'upload_profile'%}">Create Profile</a>
+                  </li>
+                  <li>
+                  <li>
+                    <a href="{% url 'upload_images'%}">Upload images</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'design'%}">Design</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'usability'%}">Usability</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'content'%}">Content</a>
+                  </li>
+                  <li>
+                    <a href="/accounts/password/change">Change Password</a>
+                  </li>
+                  <li>
+                    <a href="/logout">Logout</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            {% else %}
+            <li>
+              <a class='btn btn-default' href="/accounts/login">Login</a>
+            </li>
+          </ul>
+            {% endif %}
+            
+          </div>
+      </div>
+      <!-- search form end -->
+
+
+        </div>
+  
+    </nav>
+    </div>
+  </div>
+</body>
+
+</html>
