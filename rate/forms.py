@@ -16,17 +16,17 @@ class ProfileUploadForm(forms.ModelForm):
 		
 		exclude = ['user']
 
-class ImageForm(forms.ModelForm):
-	class Meta:
-		model = Image
+# class ImageForm(forms.ModelForm):
+# 	class Meta:
+# 		model = Image
 		
-		exclude = ['user']
+# 		exclude = ['user']
 
-class ImageUploadForm(forms.ModelForm):
-	class Meta:
-		model = Image
+# class ImageUploadForm(forms.ModelForm):
+# 	class Meta:
+# 		model = Image
 		
-		exclude = ['user']
+# 		exclude = ['user']
 class RatingForm(forms.ModelForm):
     class Meta:
         model=Rating
