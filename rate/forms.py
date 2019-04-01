@@ -1,5 +1,5 @@
 from django import forms
-from .models import Rating,Profile,Image
+from .models import Rating,Profile,Project
 from django.contrib.auth.forms import AuthenticationForm
 
 class ProfileForm(forms.ModelForm):
