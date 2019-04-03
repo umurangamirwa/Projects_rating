@@ -21,9 +21,9 @@ python3.6 manage.py runserve
 
 ## contacts:
 
-Email: umurangamclaire@gmail.com
-Phone: 0781055307
-Contact address:Rwanda
+* Email: umurangamclaire@gmail.com
+* Phone: 0781055307
+* Contact address:Rwanda
 
 ## License
 
