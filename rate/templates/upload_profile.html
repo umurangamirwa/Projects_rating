@@ -1,37 +1,17 @@
-{% extends 'my-project/base.html' %} 
+{%extends 'base.html'%}
+{% load staticfiles%}
+{% load bootstrap3 %}
+ {%block content%}
 
-{% block content %}
-<div class="container top"  >
- 
-    <div class="jumbstron">
-        
-            {% for image in image_posts %}
-            <div class="home-images">
-                <p class="home-text">
-                    <a href="{% url 'profile' %}">{{image.profile.username}}</a>
-                </p>
-            <div class="col-md-4" style="margin-bottom: 30px" >
-                <img src="{{image.image.url}}" style="width: 250px; height: 250px;" alt="Image">
-              
-                <ul class="list-inline home-list">
-                    <li class="list-inline-item">
-                        <a href="{% url 'profile' %}">{{image.profile.username}}</a>
-                    </li>
-                    <li class="list-inline-item">
-                    {% autoescape on %}
-                        <p>{{image.image_caption|safe}} </p>
-                        <p>likes:<button class="btn btn-primary">{{image.likes|safe}} </button></p>
-                    {% endautoescape %}
-                    </li>
-                </ul>
-                
-            </div>
-        
-            {% empty %}
-            <h2>No images. Please Follow some people to see their images</h2>
-            {% endfor %}
-        </div>
-        
+<div class="well" style="margin-bottom:  -200px">
+<div class="col-md-3 "></div>
+    <form method="post" enctype="multipart/form-data">
+    {% csrf_token %} 
+    {% bootstrap_form form layout='inline'%}
+    <input type="submit" class="btn btn-primary btn-sm" value="Submit">
+    <input type="hidden" name="next" value="{{next}}">
+</form>
+    <p><a  href="{% url 'profile' %}" >Previous</a></p>
     </div>
-</div>
+    
 {% endblock %}

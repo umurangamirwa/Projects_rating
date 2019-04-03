@@ -10,28 +10,28 @@ class ProfileForm(forms.ModelForm):
 	profile_picture = forms.ImageField(label = 'Image Field')
 
 
-# class ProfileUploadForm(forms.ModelForm):
-# 	class Meta:
-# 		model = Profile
-		
-# 		exclude = ['user']
 class ProfileUploadForm(forms.ModelForm):
 	class Meta:
 		model = Profile
 		
 		exclude = ['user']
-
-# class ImageForm(forms.ModelForm):
+# class ProfileUploadForm(forms.ModelForm):
 # 	class Meta:
-# 		model = Image
+# 		model = Profile
 		
 # 		exclude = ['user']
 
-# class ImageUploadForm(forms.ModelForm):
-# 	class Meta:
-# 		model = Image
+class ImageForm(forms.ModelForm):
+	class Meta:
+		model = Project
 		
-# 		exclude = ['user']
+		exclude = ['user']
+
+class ImageUploadForm(forms.ModelForm):
+	class Meta:
+		model = Project
+		
+		exclude = ['user']
 class RatingForm(forms.ModelForm):
     class Meta:
         model=Rating

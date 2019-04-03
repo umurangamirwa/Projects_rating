@@ -39,7 +39,7 @@ class Profile(models.Model):
     profile_picture = models.ImageField(upload_to = "profile/",null=True)
     bio = models.TextField(default='',blank = True)
     project = models.ForeignKey(Project,null=True)
-    contact = models.TextField(null = True)
+    contact = models.TextField(default='',null = True)
         # project = models.IntegerField(default=0)
 
     def __str__(self):
@@ -53,8 +53,8 @@ class Profile(models.Model):
 
 	
 
-    class Meta:
-        ordering = ['-pub_date']
+    # class Meta:
+    #     ordering = ['-pub_date']
 		
 
 class Rating(models.Model):
@@ -64,7 +64,7 @@ class Rating(models.Model):
     project = models.ForeignKey(Project, null= True,related_name='rating')
     content = models.IntegerField(blank=True,default=0)
     overall_score = models.IntegerField(blank=True,default=0)
-    project = models.ForeignKey(Project,on_delete=models.CASCADE)
+    # project = models.ForeignKey(Project,on_delete=models.CASCADE)
     profile = models.ForeignKey(Profile,on_delete=models.CASCADE)
 
     def __str__(self):
