@@ -1,8 +1,8 @@
 from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth.decorators import login_required
-from . forms import ProfileUploadForm,ProfileForm,ImageUploadForm,ImageForm
+from . forms import ProfileUploadForm,ProfileForm
 from django.http  import HttpResponse
-from . models import Image,Profile,Project,Image
+from . models import Rating,Profile,Project
 from django.conf import settings
 
 
@@ -23,19 +23,19 @@ def comment(request,id):
 	current_user = request.user
 	print(post)
 
-	if request.method == 'POST':
-		form = CommentForm(request.POST)
+	# if request.method == 'POST':
+	# 	form = CommentForm(request.POST)
 
-		if form.is_valid():
-			comment = form.save(commit=False)
-			comment.user = current_user
-			comment.image = post
-			comment.save()
-			return redirect('index')
-	else:
-		form = CommentForm()
+	# 	if form.is_valid():
+	# 		comment = form.save(commit=False)
+	# 		comment.user = current_user
+	# 		comment.image = post
+	# 		comment.save()
+	# 		return redirect('index')
+	# else:
+	# 	form = CommentForm()
 
-	return render(request,'comment.html',{"form":form})  
+	# return render(request,'comment.html',{"form":form})  
 
 
 @login_required(login_url='/accounts/login/')
@@ -46,12 +46,12 @@ def profile(request):
 
 	 return render(request, 'profile.html',{"current_user":current_user,"profile":profile,"follower":follower})
 
-@login_required(login_url='/accounts/login/')
-def like(request,image_id):
-	image = Image.objects.get(id=image_id)
-	like +=1
-	save_like()
-	return redirect(timeline)
+# @login_required(login_url='/accounts/login/')
+# def like(request,image_id):
+# 	image = Image.objects.get(id=image_id)
+# 	like +=1
+# 	save_like()
+# 	return redirect(timeline)
 
 def search_results(request):
     if 'image' in request.GET and request.GET["image"]:
