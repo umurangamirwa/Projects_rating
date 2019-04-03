@@ -8,6 +8,9 @@ To start using this project use the following commands:
 
 To clone this click here:https://github.com/umurangamirwa/Projects_rating
 
+## Run this command lines in your terminal:
+
+python3.6 manage.py runserve
 
 
 
