@@ -24,6 +24,10 @@ python3.6 manage.py runserve
 Email: umurangamclaire@gmail.com
 Phone: 0781055307
 
+## Contact address:Rwanda
+License
+MIT Copyright (c) 2019 Marie claire
+
 
 
 
