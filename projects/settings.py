@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rate.apps.RateConfig',
     'tinymce',
+    'rest_framework',
+]
     
 ]
 

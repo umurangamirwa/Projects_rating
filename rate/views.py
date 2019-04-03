@@ -4,7 +4,9 @@ from . forms import ProfileUploadForm,ProfileForm,ImageUploadForm,ImageForm
 from django.http  import HttpResponse
 from . models import Rating,Profile,Project
 from django.conf import settings
-
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from .serializer import Project,Profile
 
 # Create your views here.
 @login_required(login_url='/accounts/login/')
@@ -45,13 +47,6 @@ def profile(request):
 	
 
 	 return render(request, 'profile.html',{"current_user":current_user,"profile":profile})
-
-# @login_required(login_url='/accounts/login/')
-# def like(request,image_id):
-# 	image = Image.objects.get(id=image_id)
-# 	like +=1
-# 	save_like()
-# 	return redirect(timeline)
 
 def search_results(request):
     if 'image' in request.GET and request.GET["image"]:
