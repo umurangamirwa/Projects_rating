@@ -12,6 +12,12 @@ To clone this click here:https://github.com/umurangamirwa/Projects_rating
 
 python3.6 manage.py runserve
 
+## Technologies Used
+* css 
+* html 
+* Python v3.6 
+* Boostrap
+* django
 
 
 
