@@ -12,7 +12,7 @@ class Project(models.Model):
 
 
     def __str__(self):
-        return self.image
+        return self.title
 
     def delete_image(self):
         self.delete()

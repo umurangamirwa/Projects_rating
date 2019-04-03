@@ -118,7 +118,7 @@ def upload_images(request):
            
     else:
         form = ImageForm() 
-    return render(request, 'my-project/upload_images.html',{"form" : form}) 
+    return render(request, 'upload_images.html',{"form" : form}) 
 
 
 # Create your views here.
