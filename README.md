@@ -19,6 +19,11 @@ python3.6 manage.py runserve
 * Boostrap
 * django
 
+##contacts:
+
+Email: umurangamclaire@gmail.com
+Phone: 0781055307
+
 
 
 
