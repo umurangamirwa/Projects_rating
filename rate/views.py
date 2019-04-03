@@ -42,9 +42,9 @@ def rating(request,id):
 def profile(request):
 	 current_user = request.user
 	 profile = Profile.objects.all()
-	 follower = Follow.objects.filter(user = profile)
+	
 
-	 return render(request, 'profile.html',{"current_user":current_user,"profile":profile,"follower":follower})
+	 return render(request, 'profile.html',{"current_user":current_user,"profile":profile})
 
 # @login_required(login_url='/accounts/login/')
 # def like(request,image_id):
