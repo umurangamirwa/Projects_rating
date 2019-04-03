@@ -19,13 +19,14 @@ python3.6 manage.py runserve
 * Boostrap
 * django
 
-##contacts:
+## contacts:
 
 Email: umurangamclaire@gmail.com
 Phone: 0781055307
+Contact address:Rwanda
 
-## Contact address:
-License
+## License
+
 MIT Copyright (c) 2019 Marie claire
 
 
