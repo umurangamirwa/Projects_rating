@@ -25,4 +25,6 @@ urlpatterns = [
     url(r'^accounts/', include('registration.backends.simple.urls')),
     url(r'^login/$', auth_views.login, name='login'),
     url(r'^logout/$', views.logout, {"next_page": '/'}),
+    url(r'^api/merch/$', views.MerchList.as_view())
+]
 ]
