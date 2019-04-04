@@ -50,16 +50,17 @@ def profile(request):
 	 return render(request, 'profile.html',{"current_user":current_user,"profile":profile})
 
 def search_results(request):
-    if 'image' in request.GET and request.GET["image"]:
-        search_term = request.GET.get("image")
-        searched_profiles = Profile.search_profile(search_term)
+
+    if 'project' in request.GET and request.GET["project"]:
+        search_term = request.GET.get("project")
+        searched_images = Project.search_by_title(search_term)
         message = f"{search_term}"
 
-        return render(request, 'search_picture.html',{"message":message,"images": searched_profiles})
+        return render(request, 'search.html',{"message":message,"images": searched_images})
 
     else:
         message = "You haven't searched for any term"
-        return render(request, 'search_picture.html',{"message":message})
+        return render(request, 'search.html',{"message":message})
 
 
 @login_required(login_url='/accounts/login/')

@@ -30,6 +30,11 @@ class Project(models.Model):
         image = cls.objects.get(id=id)
         return image
 
+    @classmethod
+    def search_by_title(cls,search_term):
+        project = cls.objects.filter(title__icontains = search_term)
+        return project
+
 
 
 # class Meta:
