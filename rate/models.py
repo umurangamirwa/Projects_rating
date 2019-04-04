@@ -76,4 +76,9 @@ class Rating(models.Model):
 
     def save_content(self):
         self.save()
-# Create your models here.
+
+# class MoringaMerch(models.Model):
+#     name = models.CharField(max_length=40)
+#     description = models.TextField()
+#     price = models.DecimalField(decimal_places=2, max_digits=20)
+# # Create your models here.

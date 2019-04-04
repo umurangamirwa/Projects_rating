@@ -6,7 +6,8 @@ from . models import Rating,Profile,Project
 from django.conf import settings
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from .serializer import Project,Profile
+# from .serializer import Project,Profile
+# from .serializer import MerchSerializer
 
 # Create your views here.
 @login_required(login_url='/accounts/login/')
