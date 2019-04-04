@@ -23,14 +23,20 @@
                     {% autoescape on %}
                         <p>{{image.image_caption|safe}} </p>
                         <!-- <p>likes:<button class="btn btn-primary">{{image.likes|safe}} </button></p> -->
-                        <strong>Description: </strong>{{image.description|safe}}
+                        <strong style="color:black">Description: </strong>{{image.description|safe}}
                         <br>
-                        <strong>Link: </strong><a href="{{image.link|safe}}">{{image.link|safe}}</a>  
+                        <strong style="color:black">Link: </strong><a href="{{image.link|safe}}">{{image.link|safe}}</a>  
                     {% endautoescape %}
                     </div>
                     </li>
                 </ul>
-                
+                <div class="well">
+                <ul class="d-flex justify-content-between">
+                    <li><strong style="color:rgb(9, 34, 104)">Design: {{project.design}}</strong></li>
+                    <li><strong style="color:rgb(9, 34, 104)">Usability: {{project.usability}}</strong></li>
+                    <li><strong style="color:rgb(9, 34, 104)">Content: {{project.content}}</strong></li>
+                </ul>
+                </div>
                 </div>
             </div>
         
