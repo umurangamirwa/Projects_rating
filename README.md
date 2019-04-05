@@ -6,8 +6,8 @@ Award projects application allows a user to create a Profile,Rating and Projects
 ## Setup/Installation Requirements
 To start using this project use the following commands:
 
-To clone this click here:https://github.com/umurangamirwa/Projects_rating
-To view this app click:https://award93.herokuapp.com/
+* To clone this click here:https://github.com/umurangamirwa/Projects_rating
+* To view this app click:https://award93.herokuapp.com/
 ## Run this command lines in your terminal:
 
 python3.6 manage.py runserve
